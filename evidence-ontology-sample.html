@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Evidence Verification Ontology — Sample</title>
+<style>
+  @page { size: A4; margin: 14mm 14mm 12mm; }
+  :root { --ink:#1d2430; --muted:#5b6574; --line:#c9d0da; --accent:#1f5f8b; --soft:#eef3f8; }
+  * { box-sizing: border-box; }
+  body { font-family: Calibri, "Segoe UI", Arial, sans-serif; color: var(--ink); font-size: 10pt; line-height: 1.35; margin: 0; background:#fff; }
+  h1 { font-size: 16pt; margin: 0; }
+  .sub { color: var(--muted); margin: 2px 0 10px; }
+  h2 { font-size: 10.5pt; text-transform: uppercase; letter-spacing: .04em; color: var(--accent); margin: 12px 0 5px; border-bottom: 1px solid var(--line); padding-bottom: 2px; }
+  .groups { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+  .g { background: var(--soft); border-radius: 4px; padding: 6px 8px; }
+  .g b { display:block; font-size: 9pt; color: var(--accent); margin-bottom: 2px; }
+  .g span { font-family: Consolas, monospace; font-size: 8.6pt; display:block; }
+  svg text { font-family: Calibri, Arial, sans-serif; }
+  table { border-collapse: collapse; width: 100%; font-size: 9pt; }
+  td { border-bottom: 1px solid var(--line); padding: 3px 5px; vertical-align: top; }
+  td:first-child { font-family: Consolas, monospace; width: 44%; }
+  .two { display: grid; grid-template-columns: 1.15fr 1fr; gap: 14px; }
+  ul { margin: 0; padding-left: 16px; } li { margin: 2px 0; }
+  .status { margin-top: 10px; font-size: 8.8pt; color: var(--muted); border-top: 1px solid var(--line); padding-top: 6px; }
+</style>
+</head>
+<body>
+<h1>Evidence Verification Ontology — Sample</h1>
+<p class="sub">Tahir Tidjani · Anonymized extract from a stealth AI-verification product · Shared vocabulary that lets AI agents, schemas and human reviewers mean the same thing by “claim”, “evidence” and “source”.</p>
+
+<h2>Core entity types (17 of 26 shown) and audit record</h2>
+<div class="groups">
+  <div class="g"><b>Parties</b><span>Issuer</span><span>Operator</span><span>Supplier</span><span>Custodian</span><span>Verifier</span></div>
+  <div class="g"><b>Subject</b><span>Asset</span><span>Jurisdiction</span><span>License</span><span>Credential</span></div>
+  <div class="g"><b>Evidence &amp; assessment</b><span>Claim</span><span>Evidence</span><span>ComplianceCheck</span><span>RiskScore</span><span>Valuation</span><span>ProductionEvent</span><span>Dispute</span></div>
+  <div class="g"><b>AI context &amp; audit</b><span>ContextPacket</span><span>DecisionTrace</span></div>
+</div>
+
+<h2>Evidence graph (designed relationships)</h2>
+<svg viewBox="0 0 720 230" width="100%" role="img" aria-label="Evidence graph relationships">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5b6574"/></marker></defs>
+  <g font-size="11" text-anchor="middle">
+    <g fill="#eef3f8" stroke="#1f5f8b">
+      <rect x="290" y="95" width="120" height="34" rx="5"/>
+      <rect x="40" y="95" width="120" height="34" rx="5"/>
+      <rect x="560" y="95" width="120" height="34" rx="5"/>
+      <rect x="290" y="10" width="120" height="34" rx="5"/>
+      <rect x="560" y="10" width="120" height="34" rx="5"/>
+      <rect x="40" y="180" width="120" height="34" rx="5"/>
+      <rect x="290" y="180" width="120" height="34" rx="5"/>
+      <rect x="560" y="180" width="120" height="34" rx="5"/>
+      <rect x="40" y="10" width="120" height="34" rx="5"/>
+    </g>
+    <g fill="#1d2430" font-weight="bold">
+      <text x="350" y="116">Claim</text>
+      <text x="100" y="116">Asset</text>
+      <text x="620" y="116">Evidence</text>
+      <text x="350" y="31">Verifier</text>
+      <text x="620" y="31">Accountable source</text>
+      <text x="100" y="201">Jurisdiction</text>
+      <text x="350" y="201">ComplianceCheck</text>
+      <text x="620" y="201">ContextPacket</text>
+      <text x="100" y="31">DecisionTrace</text>
+    </g>
+    <g stroke="#5b6574" fill="none" marker-end="url(#a)">
+      <line x1="290" y1="112" x2="162" y2="112"/>
+      <line x1="410" y1="112" x2="558" y2="112"/>
+      <line x1="620" y1="95" x2="620" y2="46"/>
+      <line x1="350" y1="44" x2="350" y2="93"/>
+      <line x1="350" y1="180" x2="350" y2="131"/>
+      <line x1="290" y1="197" x2="162" y2="197"/>
+      <line x1="620" y1="180" x2="620" y2="131"/>
+      <line x1="560" y1="190" x2="412" y2="125"/>
+      <line x1="290" y1="27" x2="162" y2="27"/>
+    </g>
+    <g fill="#5b6574" font-size="9.5">
+      <text x="226" y="106">about</text>
+      <text x="484" y="106">supported_by</text>
+      <text x="660" y="74">provided_by</text>
+      <text x="382" y="72">reviews</text>
+      <text x="386" y="160">evaluates</text>
+      <text x="226" y="191">under</text>
+      <text x="645" y="160">cites</text>
+      <text x="492" y="170">cites</text>
+      <text x="226" y="21">records</text>
+    </g>
+  </g>
+</svg>
+
+<div class="two">
+  <div>
+    <h2>Provenance &amp; control fields</h2>
+    <table>
+      <tr><td>asset_id · claim_id<br>evidence_id</td><td>Stable identifiers used identically across agents, JSON schemas and data models.</td></tr>
+      <tr><td>source_evidence<br>source_claims</td><td>Lineage: every conclusion keeps a pointer to what it was derived from.</td></tr>
+      <tr><td>confidence_score</td><td>Model confidence, explicitly <em>not</em> legal certainty.</td></tr>
+      <tr><td>requires_human_review</td><td>Mandatory flag on high-risk AI outputs; a person decides.</td></tr>
+      <tr><td>review_status</td><td>Workflow state: accepted, manual review, rejected.</td></tr>
+    </table>
+  </div>
+  <div>
+    <h2>Design rules</h2>
+    <ul>
+      <li><b>AI assesses, people attest.</b> The vocabulary forbids wording such as “AI-certified” or “sensor-proven”.</li>
+      <li><b>Truth anchor:</b> each fact traces to the accountable source closest to it.</li>
+      <li><b>Smallest reliable context:</b> agents receive a ContextPacket of cited claims, not whole repositories.</li>
+      <li><b>Decision trace:</b> retrieved context, tool calls, policy checks, citations and approvals are recorded for audit.</li>
+      <li><b>One name, one meaning:</b> extend the glossary rather than invent new terms in code.</li>
+    </ul>
+  </div>
+</div>
+
+<p class="status"><b>Status.</b> Entity names and field conventions are used in the prototype’s agent prompts, JSON schemas and data models. The relationships above are the evidence-graph design and are not yet implemented as a graph store. Finance-specific entity types are omitted from this extract.</p>
+</body>
+</html>
